@@ -29,17 +29,17 @@ func main() {
 		isPrime = false
 	} else if n == 2 {
 		isPrime = true
-	} else if n%2 == 0 { // All even numbers except 2 are not prime.
+	} else if n%2 == 0 {
 		isPrime = false
 	} else {
-		j := 2
+		j := 3
 		for j <= int(math.Sqrt(float64(n))) {
 			if n%j == 0 {
 				isPrime = false
 				break
 			}
 			fmt.Printf("%d ", j)
-			j++
+			j = j + 2
 		}
 	}
 
