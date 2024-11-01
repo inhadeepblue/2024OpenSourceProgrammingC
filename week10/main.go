@@ -31,7 +31,9 @@ func main() {
 		for j < n {
 			if n%j == 0 {
 				isPrime = false
+				break // performance up
 			}
+			fmt.Printf("%d ", j) // Check j loop
 			j++
 		}
 	}
