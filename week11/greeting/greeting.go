@@ -2,10 +2,15 @@ package greeting
 
 import "fmt"
 
-func Hi(name string) {
+func hi(name string) {
 	fmt.Printf("Hi %s!\n", name)
 }
 
-func Hello(name string) {
+func hello(name string) {
 	fmt.Printf("Hello %s~\n", name)
+}
+
+func EnglishGreetings(name string) {
+	hello(name)
+	hi(name)
 }
