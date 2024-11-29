@@ -28,11 +28,12 @@ func main() {
 		fmt.Print("Input age : ")
 		fmt.Scan(&age)
 
-		if age < 12 {
+		switch {
+		case age < 12:
 			vs[i] = visitor{age: age, cost: 5000}
-		} else if age >= 12 && age < 65 {
-			vs[i] = visitor{age: age, cost: 10000}
-		} else {
+		case age >= 12 && age < 65:
+			vs[i] = visitor{age: age, cost: 5000}
+		default:
 			vs[i] = visitor{age: age, cost: 7000}
 		}
 	}
